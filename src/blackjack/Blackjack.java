@@ -23,7 +23,6 @@ public class Blackjack {
     }
 
     public void playGame() {
-        try (scanner) {
             System.out.println("Welcome to Blackjack!");
             
             while (true) {
@@ -78,7 +77,7 @@ public class Blackjack {
                 }
             }
         }
-    }
+    
 
     private void determineWinner() {
         int playerScore = player.calculateScore();

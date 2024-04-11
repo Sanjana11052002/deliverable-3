@@ -15,10 +15,14 @@ public class Card {
     }
 
     public int getValue() {
-        return switch (rank) {
-            case "Jack", "Queen", "King" -> 10;
-            case "Ace" -> 11;
-            default -> Integer.parseInt(rank);
-        }; // This can be adjusted based on the player's hand
+    if (rank.equals("Jack") || rank.equals("Queen") || rank.equals("King")) {
+        return 10;
+    } else if (rank.equals("Ace")) {
+        return 11;
+    } else {
+        return Integer.parseInt(rank);
     }
 }
+
+}
+
